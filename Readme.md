@@ -2,3 +2,4 @@
 
 - vim
 - tmux
+- more others
