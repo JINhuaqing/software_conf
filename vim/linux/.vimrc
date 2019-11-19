@@ -9,6 +9,19 @@ set nocompatible
 
 map <F2> :!python %
 map <F3> :!Rscript %
+let mapleader = "\<space>" "remap <leader> to space
+"change the curse location
+map <LEADER>l <C-W>l
+map <LEADER>h <C-W>h
+map <LEADER>j <C-W>j
+map <LEADER>k <C-W>k
+
+" change the window size
+map <up> :res +5<CR>
+map <down> :res -5<CR>
+map <left> :vertical resize -5<CR>
+map <right> :vertical resize +5<CR>
+
 
 
 set rnu
