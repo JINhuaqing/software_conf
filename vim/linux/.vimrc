@@ -25,6 +25,7 @@ map <right> :vertical resize +5<CR>
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree' " files tree
 "Plug 'dense-analysis/ale' " check syntax (need vim 8+)
+Plug 'justinmk/vim-sneak' "Jump to any location specified by two characters
 call plug#end()
 
 " nerdtree config
