@@ -22,15 +22,15 @@ map <down> :res -5<CR>
 map <left> :vertical resize -5<CR>
 map <right> :vertical resize +5<CR>
 
-call plug#begin('~/.vim/plugged')
-Plug 'scrooloose/nerdtree' " files tree
+"call plug#begin('~/.vim/plugged')
+"Plug 'scrooloose/nerdtree' " files tree
 "Plug 'dense-analysis/ale' " check syntax (need vim 8+)
-Plug 'justinmk/vim-sneak' "Jump to any location specified by two characters
-call plug#end()
-
+"Plug 'justinmk/vim-sneak' "Jump to any location specified by two characters
+"call plug#end()
+"
 " nerdtree config
-map ff :NERDTreeToggle<CR>
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+"map ff :NERDTreeToggle<CR>
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 
 set rnu
@@ -61,6 +61,14 @@ set cursorline             " Find the current line quickly.
 set wrapscan               " Searches wrap around end-of-file.
 set report      =0         " Always report changed lines.
 set synmaxcol   =200       " Only highlight the first 200 columns.
+syntax on "highlight code
 
 hi Comment ctermfg =blue
 
+"set rtp+=~/Documents/tabnine-vim " Use tabnine-vim plugin
+
+" Switching among Buffers 
+nnoremap <silent> [b :bprevious<CR>
+nnoremap <silent> ]b :bnext<CR>
+nnoremap <silent> [B :bfirst<CR>
+nnoremap <silent> ]B :blast<CR>
